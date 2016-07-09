@@ -973,7 +973,7 @@ Public Class DetalleVenta
         Dim sumasxpos As Integer
         Dim sumasypos As Integer
 
-        yPos += 118
+        yPos += 120
         xPos -= 5
 
         'para el cliente
@@ -987,13 +987,28 @@ Public Class DetalleVenta
 
 
 
-        yPos += 35
+        yPos += 38
         xPos += 5
 
+        Dim seguiry As Single = yPos
+        Dim seguirx As Single = xPos
 
         'para la direccion
-
+        xPos += 10
         e.Graphics.DrawString(dtcliente.Rows(0).Item(5), prFontletras, Brushes.Black, xPos, yPos)
+
+        'para el municipio
+        yPos += 17
+
+        e.Graphics.DrawString(dtcliente.Rows(0).Item(10), prFontletras, Brushes.Black, xPos, yPos)
+        'para el departamento
+        yPos += 17
+        xPos += 30
+
+        e.Graphics.DrawString(dtcliente.Rows(0).Item(11), prFontletras, Brushes.Black, xPos, yPos)
+
+        xPos = seguirx
+        yPos = seguiry
 
         'para el nit
         yPos -= 16

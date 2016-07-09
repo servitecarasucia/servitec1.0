@@ -179,6 +179,7 @@ Public Class compra
             convertirnumeroletras(num)
             cargarfactura()
 
+
             'Cuando todo ha salido bien hace los cargos a las existencias
             Dim c As Double = 0
             For i As Integer = 0 To dtdetallefacturacompra.Rows.Count - 1

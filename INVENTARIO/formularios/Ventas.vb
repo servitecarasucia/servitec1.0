@@ -927,7 +927,6 @@ Public Class Ventas
     End Sub
 
     Private Sub print_PrintPage1(ByVal sender As Object, ByVal e As PrintPageEventArgs)
-
         Dim dtfacturaventa As DataTable
         Dim tfacturaventa As New clsMaestros(clsNomTab.eTbl.FacturaVenta)
 
@@ -937,6 +936,8 @@ Public Class Ventas
         Dim dtcliente As DataTable
         Dim tcliente As New clsMaestros(clsNomTab.eTbl.Clientes)
 
+        Dim tcliente1 As New clsMaestros(clsNomTab.eTbl.clientescf)
+
         Dim dtproducto As DataTable
         Dim tproducto As New clsMaestros(clsNomTab.eTbl.Productos)
 
@@ -944,7 +945,13 @@ Public Class Ventas
 
         dtfacturaventa = tfacturaventa.Consultar(" where codfacturav = " & Me.codfactura)
         dtdetallefacturaventa = tdetallefacturaventa.Consultar(" where codfacturav = " & Me.codfactura)
-        dtcliente = tcliente.Consultar(" where codcliente = " & dtfacturaventa.Rows(0).Item(3))
+        Try
+            dtcliente = tcliente.Consultar(" where codcliente = " & dtfacturaventa.Rows(0).Item(3))
+            Dim nc As String = dtcliente.Rows(0).Item(1)
+        Catch ex As Exception
+            dtcliente = tcliente1.Consultar(" where idclientescf = " & dtfacturaventa.Rows(0).Item(3))
+            Dim nc As String = dtcliente.Rows(0).Item(1)
+        End Try
 
 
 
@@ -965,7 +972,7 @@ Public Class Ventas
         Dim sumasxpos As Integer
         Dim sumasypos As Integer
 
-        yPos += 118
+        yPos += 120
         xPos -= 5
 
         'para el cliente
@@ -979,13 +986,28 @@ Public Class Ventas
 
 
 
-        yPos += 35
+        yPos += 38
         xPos += 5
 
+        Dim seguiry As Single = yPos
+        Dim seguirx As Single = xPos
 
         'para la direccion
-
+        xPos += 10
         e.Graphics.DrawString(dtcliente.Rows(0).Item(5), prFontletras, Brushes.Black, xPos, yPos)
+
+        'para el municipio
+        yPos += 17
+
+        e.Graphics.DrawString(dtcliente.Rows(0).Item(10), prFontletras, Brushes.Black, xPos, yPos)
+        'para el departamento
+        yPos += 17
+        xPos += 30
+
+        e.Graphics.DrawString(dtcliente.Rows(0).Item(11), prFontletras, Brushes.Black, xPos, yPos)
+
+        xPos = seguirx
+        yPos = seguiry
 
         'para el nit
         yPos -= 16

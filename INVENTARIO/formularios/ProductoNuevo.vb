@@ -117,7 +117,7 @@ Public Class ProductoNuevo
                 MsgBox("El codigo no se puede repetir para los productos", MsgBoxStyle.AbortRetryIgnore, "Aviso")
             End If
         Catch ex As Exception
-
+            'MsgBox("Ocurrio un error al ingresar el articulo razon: " & ex.Message, MsgBoxStyle.Critical, "Aviso")
         End Try
     End Sub
     Private Sub insertarproducto()
