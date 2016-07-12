@@ -90,9 +90,9 @@ Public Class compra
 
         If estado = "editando" Then
             If guardar = False Then
-                If MsgBox("Desea guardar el documento", MsgBoxStyle.YesNo, "aviso") = MsgBoxResult.Yes Then
-                    botguardar_Click_1(sender, e)
-                End If
+
+                botguardar_Click_1(sender, e)
+
             End If
 
 
@@ -1029,17 +1029,10 @@ Public Class compra
 
     End Sub
 
-   
-    Private Sub gridproductos_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles gridproductos.CellContentClick
-       
-    End Sub
+ 
 
-    Private Sub texcantidad_TextChanged(sender As Object, e As EventArgs) Handles texcantidad.TextChanged
-
-    End Sub
-
-    Private Sub textotalp_TextChanged(sender As Object, e As EventArgs) Handles textotalp.TextChanged
-
+    Private Sub botactualizar_Click(sender As Object, e As EventArgs) Handles botactualizar.Click
+        cargargrid()
     End Sub
 End Class
 

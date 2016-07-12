@@ -43,7 +43,6 @@ Partial Class Productos
         Me.Hola2ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.respaldar = New System.Windows.Forms.SaveFileDialog()
         Me.gridproductos = New System.Windows.Forms.DataGridView()
-        Me.timerfoco = New System.Windows.Forms.Timer(Me.components)
         Me.codiggo = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Descripcion = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -54,6 +53,8 @@ Partial Class Productos
         Me.p40 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.p30 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.p20 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.timerfoco = New System.Windows.Forms.Timer(Me.components)
+        Me.botactualizar = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.ContextMenuStrip1.SuspendLayout()
@@ -250,10 +251,6 @@ Partial Class Productos
         Me.gridproductos.Size = New System.Drawing.Size(1080, 387)
         Me.gridproductos.TabIndex = 13
         '
-        'timerfoco
-        '
-        Me.timerfoco.Enabled = True
-        '
         'codiggo
         '
         Me.codiggo.Frozen = True
@@ -295,37 +292,53 @@ Partial Class Productos
         '
         'exi
         '
-        Me.exi.Frozen = true
+        Me.exi.Frozen = True
         Me.exi.HeaderText = "Existencias"
         Me.exi.Name = "exi"
         '
         'p40
         '
-        Me.p40.Frozen = true
+        Me.p40.Frozen = True
         Me.p40.HeaderText = "p40"
         Me.p40.Name = "p40"
-        Me.p40.Visible = false
+        Me.p40.Visible = False
         '
         'p30
         '
-        Me.p30.Frozen = true
+        Me.p30.Frozen = True
         Me.p30.HeaderText = "p30"
         Me.p30.Name = "p30"
-        Me.p30.Visible = false
+        Me.p30.Visible = False
         '
         'p20
         '
-        Me.p20.Frozen = true
+        Me.p20.Frozen = True
         Me.p20.HeaderText = "p20"
         Me.p20.Name = "p20"
-        Me.p20.Visible = false
+        Me.p20.Visible = False
+        '
+        'timerfoco
+        '
+        Me.timerfoco.Enabled = True
+        '
+        'botactualizar
+        '
+        Me.botactualizar.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.botactualizar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.botactualizar.Location = New System.Drawing.Point(967, 46)
+        Me.botactualizar.Name = "botactualizar"
+        Me.botactualizar.Size = New System.Drawing.Size(107, 43)
+        Me.botactualizar.TabIndex = 128
+        Me.botactualizar.Text = "Actualizar"
+        Me.botactualizar.UseVisualStyleBackColor = False
         '
         'Productos
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6!, 13!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Beige
         Me.ClientSize = New System.Drawing.Size(1074, 586)
+        Me.Controls.Add(Me.botactualizar)
         Me.Controls.Add(Me.gridproductos)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
@@ -370,4 +383,5 @@ End Sub
     Friend WithEvents p40 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents p30 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents p20 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents botactualizar As System.Windows.Forms.Button
 End Class
