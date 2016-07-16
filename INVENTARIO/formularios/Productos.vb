@@ -490,4 +490,8 @@ Public Class Productos
         End Try
     End Sub
 
+    Private Sub botactualizar_Click(sender As Object, e As EventArgs) Handles botactualizar.Click
+        Me.texbusquedacodigonombre.Text = ""
+        cargargrid()
+    End Sub
 End Class

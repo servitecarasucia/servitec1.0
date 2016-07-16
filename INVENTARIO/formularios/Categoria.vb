@@ -8,6 +8,7 @@ Public Class Categoria
     Public frmprod As ProductoNuevo
     Public frmcambio As Combinar
     Private Sub Categoria_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        MdiParent = mdiMain
         cargargrid()
     End Sub
 

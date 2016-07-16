@@ -17,6 +17,7 @@ Public Class DetalledelaCompra
     Public idcompra As String
 
     Private Sub DetalledelaCompra_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        MdiParent = mdiMain
         hacerconsulta()
         cargarfacturac()
 

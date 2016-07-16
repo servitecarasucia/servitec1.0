@@ -24,7 +24,7 @@ Public Class VentasRealizadas
             Me.botseleccionar.Visible = True
             Me.botnuevo.Visible = False
             Me.botdetalle.Visible = False
-            dtfacturaventa = tfacturaventa.Consultar(" where numfacturav = 0 and descuento = 0 order by  fecha")
+            dtfacturaventa = tfacturaventa.Consultar(" where tipo = 'credito' and descuento <> total order by  fecha")
         ElseIf donde = "noti" Then
             loadf = True
 

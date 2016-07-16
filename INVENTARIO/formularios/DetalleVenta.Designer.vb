@@ -99,12 +99,14 @@ Partial Class DetalleVenta
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.botcambiarvence = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
         CType(Me.gridcompra, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridViewX1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.gridventa, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.grupboton.SuspendLayout()
         Me.gruregis.SuspendLayout()
+        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label5
@@ -289,7 +291,7 @@ Partial Class DetalleVenta
         DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.ControlText
         DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.gridventa.DefaultCellStyle = DataGridViewCellStyle8
-        Me.gridventa.GridColor = System.Drawing.Color.FromArgb(CType(CType(170, Byte), Integer), CType(CType(170, Byte), Integer), CType(CType(170, Byte), Integer))
+        Me.gridventa.GridColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(215, Byte), Integer), CType(CType(229, Byte), Integer))
         Me.gridventa.Location = New System.Drawing.Point(79, 211)
         Me.gridventa.Name = "gridventa"
         Me.gridventa.ReadOnly = True
@@ -782,6 +784,7 @@ Partial Class DetalleVenta
         '
         'Panel1
         '
+        Me.Panel1.Controls.Add(Me.Button2)
         Me.Panel1.Location = New System.Drawing.Point(12, 103)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(660, 87)
@@ -803,6 +806,16 @@ Partial Class DetalleVenta
         Me.botcambiarvence.TabIndex = 219
         Me.botcambiarvence.Text = "Cambiar"
         Me.botcambiarvence.UseVisualStyleBackColor = True
+        '
+        'Button2
+        '
+        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.Location = New System.Drawing.Point(16, 61)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(75, 23)
+        Me.Button2.TabIndex = 220
+        Me.Button2.Text = "Cambiar"
+        Me.Button2.UseVisualStyleBackColor = True
         '
         'DetalleVenta
         '
@@ -860,6 +873,7 @@ Partial Class DetalleVenta
         Me.grupboton.ResumeLayout(False)
         Me.gruregis.ResumeLayout(False)
         Me.gruregis.PerformLayout()
+        Me.Panel1.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -937,4 +951,5 @@ Partial Class DetalleVenta
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents Panel2 As System.Windows.Forms.Panel
     Friend WithEvents botcambiarvence As System.Windows.Forms.Button
+    Friend WithEvents Button2 As System.Windows.Forms.Button
 End Class

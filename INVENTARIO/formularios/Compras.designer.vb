@@ -22,7 +22,7 @@ Partial Class compra
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.texnumfact = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -86,6 +86,7 @@ Partial Class compra
         Me.popular = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.frecuente = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.mayoreo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.botactualizar = New System.Windows.Forms.Button()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         CType(Me.gridcompra, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -533,14 +534,14 @@ Partial Class compra
         Me.gridcompra.AllowUserToDeleteRows = False
         Me.gridcompra.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.gridcompra.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.codigo, Me.cantida, Me.nombr, Me.preciu, Me.preciod, Me.exentas, Me.tota})
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.gridcompra.DefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.gridcompra.DefaultCellStyle = DataGridViewCellStyle2
         Me.gridcompra.GridColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(215, Byte), Integer), CType(CType(229, Byte), Integer))
         Me.gridcompra.Location = New System.Drawing.Point(14, 159)
         Me.gridcompra.Name = "gridcompra"
@@ -679,12 +680,24 @@ Partial Class compra
         Me.mayoreo.Name = "mayoreo"
         Me.mayoreo.Visible = False
         '
+        'botactualizar
+        '
+        Me.botactualizar.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.botactualizar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.botactualizar.Location = New System.Drawing.Point(985, 110)
+        Me.botactualizar.Name = "botactualizar"
+        Me.botactualizar.Size = New System.Drawing.Size(107, 43)
+        Me.botactualizar.TabIndex = 127
+        Me.botactualizar.Text = "Actualizar"
+        Me.botactualizar.UseVisualStyleBackColor = False
+        '
         'compra
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.ClientSize = New System.Drawing.Size(1108, 668)
+        Me.Controls.Add(Me.botactualizar)
         Me.Controls.Add(Me.gridproductos)
         Me.Controls.Add(Me.DateTimePicker2)
         Me.Controls.Add(Me.gridcompra)
@@ -806,4 +819,5 @@ Partial Class compra
     Friend WithEvents popular As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents frecuente As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents mayoreo As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents botactualizar As System.Windows.Forms.Button
 End Class

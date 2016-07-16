@@ -1526,4 +1526,15 @@ Public Class DetalleVenta
 
 
     End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Try
+          
+            Dim mf As New clsProcesos
+            mf.Ejecutar("update facturaventa set numfacturav = '" & Me.texnumfactura.Text.ToString & "' where codfacturav = " & codfactura)
+            MsgBox("El numero se actualizo con exito", MsgBoxStyle.Information, "Exito")
+        Catch ex As Exception
+
+        End Try
+    End Sub
 End Class
