@@ -23,16 +23,17 @@ Partial Class VentasRealizadas
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.GroupPanel1 = New DevComponents.DotNetBar.Controls.GroupPanel()
+        Me.grubotones = New System.Windows.Forms.GroupBox()
+        Me.botnuevo = New System.Windows.Forms.Button()
+        Me.botsalir = New System.Windows.Forms.Button()
+        Me.botdetalle = New System.Windows.Forms.Button()
+        Me.botseleccionar = New System.Windows.Forms.Button()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.botbuscar = New System.Windows.Forms.Button()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.dt2 = New System.Windows.Forms.DateTimePicker()
         Me.dt1 = New System.Windows.Forms.DateTimePicker()
-        Me.grubotones = New System.Windows.Forms.GroupBox()
-        Me.botnuevo = New System.Windows.Forms.Button()
-        Me.botsalir = New System.Windows.Forms.Button()
-        Me.botdetalle = New System.Windows.Forms.Button()
         Me.grubbusquedaprov = New System.Windows.Forms.GroupBox()
         Me.combotipo = New System.Windows.Forms.ComboBox()
         Me.checfecha = New System.Windows.Forms.CheckBox()
@@ -41,7 +42,6 @@ Partial Class VentasRealizadas
         Me.texbusqueda = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.gridfacturaventas = New System.Windows.Forms.DataGridView()
-        Me.botseleccionar = New System.Windows.Forms.Button()
         Me.numero = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.nombreprob = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.tipo = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -51,8 +51,8 @@ Partial Class VentasRealizadas
         Me.codigo = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.codcliente = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupPanel1.SuspendLayout()
-        Me.GroupBox2.SuspendLayout()
         Me.grubotones.SuspendLayout()
+        Me.GroupBox2.SuspendLayout()
         Me.grubbusquedaprov.SuspendLayout()
         CType(Me.gridfacturaventas, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -100,6 +100,62 @@ Partial Class VentasRealizadas
         Me.GroupPanel1.StyleMouseOver.Class = ""
         Me.GroupPanel1.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.GroupPanel1.TabIndex = 0
+        '
+        'grubotones
+        '
+        Me.grubotones.BackColor = System.Drawing.Color.Transparent
+        Me.grubotones.Controls.Add(Me.botnuevo)
+        Me.grubotones.Controls.Add(Me.botsalir)
+        Me.grubotones.Controls.Add(Me.botdetalle)
+        Me.grubotones.Controls.Add(Me.botseleccionar)
+        Me.grubotones.Location = New System.Drawing.Point(23, 468)
+        Me.grubotones.Margin = New System.Windows.Forms.Padding(4)
+        Me.grubotones.Name = "grubotones"
+        Me.grubotones.Padding = New System.Windows.Forms.Padding(4)
+        Me.grubotones.Size = New System.Drawing.Size(1065, 78)
+        Me.grubotones.TabIndex = 19
+        Me.grubotones.TabStop = False
+        '
+        'botnuevo
+        '
+        Me.botnuevo.Location = New System.Drawing.Point(8, 25)
+        Me.botnuevo.Margin = New System.Windows.Forms.Padding(4)
+        Me.botnuevo.Name = "botnuevo"
+        Me.botnuevo.Size = New System.Drawing.Size(124, 37)
+        Me.botnuevo.TabIndex = 3
+        Me.botnuevo.Text = "Nuevo"
+        Me.botnuevo.UseVisualStyleBackColor = True
+        '
+        'botsalir
+        '
+        Me.botsalir.Location = New System.Drawing.Point(933, 23)
+        Me.botsalir.Margin = New System.Windows.Forms.Padding(4)
+        Me.botsalir.Name = "botsalir"
+        Me.botsalir.Size = New System.Drawing.Size(124, 37)
+        Me.botsalir.TabIndex = 2
+        Me.botsalir.Text = "Salir"
+        Me.botsalir.UseVisualStyleBackColor = True
+        '
+        'botdetalle
+        '
+        Me.botdetalle.Location = New System.Drawing.Point(140, 25)
+        Me.botdetalle.Margin = New System.Windows.Forms.Padding(4)
+        Me.botdetalle.Name = "botdetalle"
+        Me.botdetalle.Size = New System.Drawing.Size(124, 37)
+        Me.botdetalle.TabIndex = 0
+        Me.botdetalle.Text = "Detalle"
+        Me.botdetalle.UseVisualStyleBackColor = True
+        '
+        'botseleccionar
+        '
+        Me.botseleccionar.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.botseleccionar.Location = New System.Drawing.Point(463, 18)
+        Me.botseleccionar.Name = "botseleccionar"
+        Me.botseleccionar.Size = New System.Drawing.Size(135, 53)
+        Me.botseleccionar.TabIndex = 2
+        Me.botseleccionar.Text = "Seleccionar"
+        Me.botseleccionar.UseVisualStyleBackColor = True
+        Me.botseleccionar.Visible = False
         '
         'GroupBox2
         '
@@ -158,51 +214,6 @@ Partial Class VentasRealizadas
         Me.dt1.Name = "dt1"
         Me.dt1.Size = New System.Drawing.Size(200, 22)
         Me.dt1.TabIndex = 5
-        '
-        'grubotones
-        '
-        Me.grubotones.BackColor = System.Drawing.Color.Transparent
-        Me.grubotones.Controls.Add(Me.botnuevo)
-        Me.grubotones.Controls.Add(Me.botsalir)
-        Me.grubotones.Controls.Add(Me.botdetalle)
-        Me.grubotones.Controls.Add(Me.botseleccionar)
-        Me.grubotones.Location = New System.Drawing.Point(23, 468)
-        Me.grubotones.Margin = New System.Windows.Forms.Padding(4)
-        Me.grubotones.Name = "grubotones"
-        Me.grubotones.Padding = New System.Windows.Forms.Padding(4)
-        Me.grubotones.Size = New System.Drawing.Size(1065, 78)
-        Me.grubotones.TabIndex = 19
-        Me.grubotones.TabStop = False
-        '
-        'botnuevo
-        '
-        Me.botnuevo.Location = New System.Drawing.Point(8, 25)
-        Me.botnuevo.Margin = New System.Windows.Forms.Padding(4)
-        Me.botnuevo.Name = "botnuevo"
-        Me.botnuevo.Size = New System.Drawing.Size(124, 37)
-        Me.botnuevo.TabIndex = 3
-        Me.botnuevo.Text = "Nuevo"
-        Me.botnuevo.UseVisualStyleBackColor = True
-        '
-        'botsalir
-        '
-        Me.botsalir.Location = New System.Drawing.Point(933, 23)
-        Me.botsalir.Margin = New System.Windows.Forms.Padding(4)
-        Me.botsalir.Name = "botsalir"
-        Me.botsalir.Size = New System.Drawing.Size(124, 37)
-        Me.botsalir.TabIndex = 2
-        Me.botsalir.Text = "Salir"
-        Me.botsalir.UseVisualStyleBackColor = True
-        '
-        'botdetalle
-        '
-        Me.botdetalle.Location = New System.Drawing.Point(140, 25)
-        Me.botdetalle.Margin = New System.Windows.Forms.Padding(4)
-        Me.botdetalle.Name = "botdetalle"
-        Me.botdetalle.Size = New System.Drawing.Size(124, 37)
-        Me.botdetalle.TabIndex = 0
-        Me.botdetalle.Text = "Detalle"
-        Me.botdetalle.UseVisualStyleBackColor = True
         '
         'grubbusquedaprov
         '
@@ -293,19 +304,8 @@ Partial Class VentasRealizadas
         Me.gridfacturaventas.Name = "gridfacturaventas"
         Me.gridfacturaventas.ReadOnly = True
         Me.gridfacturaventas.RowHeadersVisible = False
-        Me.gridfacturaventas.Size = New System.Drawing.Size(1055, 354)
+        Me.gridfacturaventas.Size = New System.Drawing.Size(1055, 269)
         Me.gridfacturaventas.TabIndex = 1
-        '
-        'botseleccionar
-        '
-        Me.botseleccionar.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.botseleccionar.Location = New System.Drawing.Point(463, 18)
-        Me.botseleccionar.Name = "botseleccionar"
-        Me.botseleccionar.Size = New System.Drawing.Size(135, 53)
-        Me.botseleccionar.TabIndex = 2
-        Me.botseleccionar.Text = "Seleccionar"
-        Me.botseleccionar.UseVisualStyleBackColor = True
-        Me.botseleccionar.Visible = False
         '
         'numero
         '
@@ -374,9 +374,9 @@ Partial Class VentasRealizadas
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Ventas Realizadas"
         Me.GroupPanel1.ResumeLayout(False)
+        Me.grubotones.ResumeLayout(False)
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
-        Me.grubotones.ResumeLayout(False)
         Me.grubbusquedaprov.ResumeLayout(False)
         Me.grubbusquedaprov.PerformLayout()
         CType(Me.gridfacturaventas, System.ComponentModel.ISupportInitialize).EndInit()

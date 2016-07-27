@@ -373,15 +373,15 @@ Public Class VentasRealizadas
             a2 = dt2.Value.Year
             f2 = a2 + "-" + m2 + "-" + d2
             If Me.combotipo.Text = "Factura" Then
-                dtfacturaventa = tfacturaventa.Consultar(" where tipo = 'Factura' and  fecha >= '" + f1 + "' and fecha <= '" + f2 + "'")
+                dtfacturaventa = tfacturaventa.Consultar(" where tipo = 'Factura' and total <> 0 and  fecha >= '" + f1 + "' and fecha <= '" + f2 + "'")
                 tipof = "Factura"
                 cargarventas()
             ElseIf Me.combotipo.Text = "Comprovante de Credito fiscal" Then
-                dtfacturaventa = tfacturaventa.Consultar(" where tipo = 'Comprovante de Credito fiscal' and fecha >='" + f1 + "' and fecha <= '" + f2 + "'")
+                dtfacturaventa = tfacturaventa.Consultar(" where tipo = 'Comprovante de Credito fiscal' and total <> 0 and fecha >='" + f1 + "' and fecha <= '" + f2 + "'")
                 tipof = "Comprovante de Credito fiscal"
                 cargarventas()
             ElseIf Me.radiotodo.Checked = True Then
-                dtfacturaventa = tfacturaventa.Consultar(" where  fecha >='" + f1 + "' and fecha <= '" + f2 + "'")
+                dtfacturaventa = tfacturaventa.Consultar(" where total <> 0 and  fecha >='" + f1 + "' and fecha <= '" + f2 + "'")
                 tipof = "todos"
                 cargarventas()
             End If

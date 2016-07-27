@@ -49,7 +49,7 @@ Public Class Clientes
             Else
                 MdiParent = mdiMain
             End If
-            cargargrid()
+            cargargrid1()
         Catch ex As Exception
             MsgBox("Ocurrio un error asegurese de haber llenado todos los campo correctamente", MsgBoxStyle.OkOnly, "Avise")
         End Try
@@ -411,6 +411,10 @@ Public Class Clientes
  
   
     Private Sub grubbusquedaprov_Enter(sender As Object, e As EventArgs) Handles grubbusquedaprov.Enter
+
+    End Sub
+
+    Private Sub radiojuridico_CheckedChanged(sender As Object, e As EventArgs) Handles radiojuridico.CheckedChanged
 
     End Sub
 End Class
