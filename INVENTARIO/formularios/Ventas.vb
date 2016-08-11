@@ -91,6 +91,10 @@ Public Class Ventas
     Private dtclisalfa As DataTable
 
 
+    'para priorizar el cliente
+    Public cliente As String = "cf"
+
+
     Private Sub Ventas_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
 
         If donde = "Cotizar" Then
@@ -1270,7 +1274,7 @@ Public Class Ventas
 
                 End If
 
-                consultar.Consultar(" update facturaventa set numfacturav = " & Me.texnumfact.Text & ", tipo = '" & tipo & "', codcliente = '" & idcliente & "', fecha = '" & f & "',formadepago = '" & Me.comboformapago.Text & "', tiraje = '" & Me.textiraje.Text & "', " & " sumas = " & Me.texsumas.Text.Trim.ToString & ", iva = " & Me.texiva.Text.Trim.ToString & ", total = " & Me.textotal.Text.Trim.ToString & ",fechavence = '" & f & "',comision = " & comi & " where codfacturav = " & codfactura)
+                consultar.Consultar(" update facturaventa set numfacturav = " & Me.texnumfact.Text & ", tipo = '" & tipo & "', codcliente = '" & idcliente & "', fecha = '" & f & "',formadepago = '" & Me.comboformapago.Text & "', tiraje = '" & Me.textiraje.Text & "', " & " sumas = " & Me.texsumas.Text.Trim.ToString.Replace(",", "") & ", iva = " & Me.texiva.Text.Trim.ToString.Replace(",", "") & ", total = " & Me.textotal.Text.Trim.ToString.Replace(",", "") & ",fechavence = '" & f & "',comision = " & comi & " where codfacturav = " & codfactura)
 
 
                 Dim c As Double

@@ -374,7 +374,11 @@ Public Class Clientes
 
                 frmv.idcliente = Me.gridclientes.Rows(Me.gridclientes.CurrentCell.RowIndex).Cells(0).Value
                 frmv.texcliente.Text = Me.gridclientes.Rows(Me.gridclientes.CurrentCell.RowIndex).Cells(1).Value
-
+                If Me.radiojuridico.Checked Then
+                    frmv.cliente = "cfi"
+                Else
+                    frmv.cliente = "cf"
+                End If
             Else
                 Dim idclie As String = Me.gridclientes.Rows(Me.gridclientes.CurrentCell.RowIndex).Cells(0).Value
                 Dim nomcli As String = Me.gridclientes.Rows(Me.gridclientes.CurrentCell.RowIndex).Cells(1).Value

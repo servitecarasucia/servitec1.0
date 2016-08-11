@@ -420,7 +420,7 @@ Partial Class Ventas
         DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.gridcompra.DefaultCellStyle = DataGridViewCellStyle1
-        Me.gridcompra.GridColor = System.Drawing.Color.FromArgb(CType(CType(170, Byte), Integer), CType(CType(170, Byte), Integer), CType(CType(170, Byte), Integer))
+        Me.gridcompra.GridColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(215, Byte), Integer), CType(CType(229, Byte), Integer))
         Me.gridcompra.Location = New System.Drawing.Point(8, 177)
         Me.gridcompra.Name = "gridcompra"
         Me.gridcompra.ReadOnly = True

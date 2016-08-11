@@ -930,7 +930,7 @@ Public Class Creditos
 
         
 
-            consultar.Consultar(" update facturaventa set numfacturav = '0', tipo = '" & tipo & "', codcliente = '" & idcliente & "', fecha = '" & f & "', formadepago = 'Credito', tiraje = '0', " & " sumas = " & Me.texsumas.Text.Trim.ToString & ", iva = " & Me.texiva.Text.Trim.ToString & ", total = " & Me.textotal.Text.Trim.ToString & ",fechavence = '" & fv & "',comision = 0 where codfacturav = " & codfactura)
+            consultar.Consultar(" update facturaventa set numfacturav = '0', tipo = '" & tipo & "', codcliente = '" & idcliente & "', fecha = '" & f & "', formadepago = 'Credito', tiraje = '0', " & " sumas = " & Me.texsumas.Text.Trim.ToString.Replace(",", "") & ", iva = " & Me.texiva.Text.Trim.ToString.Replace(",", "") & ", total = " & Me.textotal.Text.Trim.ToString.Replace(",", "") & ",fechavence = '" & fv & "',comision = 0 where codfacturav = " & codfactura)
 
 
             Dim c As Double

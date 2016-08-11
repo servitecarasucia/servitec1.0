@@ -304,7 +304,7 @@ Partial Class VentasRealizadas
         Me.gridfacturaventas.Name = "gridfacturaventas"
         Me.gridfacturaventas.ReadOnly = True
         Me.gridfacturaventas.RowHeadersVisible = False
-        Me.gridfacturaventas.Size = New System.Drawing.Size(1055, 269)
+        Me.gridfacturaventas.Size = New System.Drawing.Size(1055, 355)
         Me.gridfacturaventas.TabIndex = 1
         '
         'numero
