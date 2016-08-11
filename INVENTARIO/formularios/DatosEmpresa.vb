@@ -61,7 +61,7 @@ Public Class DatosEmpresa
                 Proveedores.Insertar("'" + nombreE + "','" + nit + "','" + nrc + "','" + giro + "','" + Me.direccionN + "','" + Me.telefonoN + "','" + Me.faxN + "','" + Me.email + "','Activo'")
                 MsgBox("El proveedor se guardo con exito", MsgBoxStyle.Information, "Exito")
             ElseIf donde = "clientes" Then
-                Clientes.Insertar("'" + nombreE + "','" + nit + "','" + nrc + "','" + giro + "','" + Me.direccionN + "','" + Me.telefonoN + "','" + Me.faxN + "','" + Me.email + "','Activo','" + frm.combomuniN.Text.ToString + "','" + frm.combodeparN.Text.ToString + "'")
+                Clientes.Insertar("MD5('" + nombreE + "'),'" + nombreE + "','" + nit + "','" + nrc + "','" + giro + "','" + Me.direccionN + "','" + Me.telefonoN + "','" + Me.faxN + "','" + Me.email + "','Activo','" + frm.combomuniN.Text.ToString + "','" + frm.combodeparN.Text.ToString + "'")
                 MsgBox("El cliente se guardo con exito", MsgBoxStyle.Information, "Exito")
             End If
         Catch ex As Exception

@@ -72,11 +72,11 @@ Public Class DetalleVenta
                 If dtfacturav.Rows(0).Item(2).ToString = "Factura" Then
                     dtclientes = tfcf.Consultar(" where idclientescf = " & dtfacturav.Rows(0).Item(3).ToString)
                     If dtclientes.Rows.Count = 0 Then
-                        dtclientes = tclientes.Consultar(" where codcliente = " + dtfacturav.Rows(0).Item(3).ToString)
+                        dtclientes = tclientes.Consultar(" where codcliente = '" + dtfacturav.Rows(0).Item(3).ToString + "'")
                     End If
                     Me.gruregis.Visible = False
                 Else
-                    dtclientes = tclientes.Consultar(" where codcliente = " + dtfacturav.Rows(0).Item(3).ToString)
+                    dtclientes = tclientes.Consultar(" where codcliente = '" + dtfacturav.Rows(0).Item(3).ToString + "'")
                     If dtclientes.Rows.Count = 0 Then
                         dtclientes = tfcf.Consultar(" where idclientescf = " & dtfacturav.Rows(0).Item(3).ToString)
                     End If
@@ -192,7 +192,7 @@ Public Class DetalleVenta
                         Me.texcliente.Text = dtclientes.Rows(0).Item(1)
                         Me.gruregis.Visible = False
                     Catch ex As Exception
-                        dtclientes = tclientes.Consultar(" where codcliente = " + dtfacturav.Rows(0).Item(3).ToString)
+                        dtclientes = tclientes.Consultar(" where codcliente = '" + dtfacturav.Rows(0).Item(3).ToString + "'")
                         Me.gruregis.Visible = True
                     End Try
 
@@ -203,12 +203,12 @@ Public Class DetalleVenta
                         Me.gruregis.Visible = False
                         Dim nc As String = dtclientes.Rows(0).Item(1)
                     Catch ex As Exception
-                        dtclientes = tclientes.Consultar(" where codcliente = " + dtfacturav.Rows(0).Item(3).ToString)
+                        dtclientes = tclientes.Consultar(" where codcliente = '" + dtfacturav.Rows(0).Item(3).ToString + "'")
                         Me.gruregis.Visible = True
                     End Try
                 Else
                     Try
-                        dtclientes = tclientes.Consultar(" where codcliente = " + dtfacturav.Rows(0).Item(3).ToString)
+                        dtclientes = tclientes.Consultar(" where codcliente = '" + dtfacturav.Rows(0).Item(3).ToString + "'")
                         If dtclientes.Rows.Count = 0 Then
                             dtclientes = tfcf.Consultar(" where idclientescf = " & dtfacturav.Rows(0).Item(3).ToString)
                         End If

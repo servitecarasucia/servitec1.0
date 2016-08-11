@@ -145,7 +145,7 @@ Public Class VentasRealizadas
 
                         dtclientes = tclientes.Consultar(" where codcliente = '" + dtfacturaventa.Rows(i).Item(3).ToString + "'")
                         If dtclientes.Rows.Count = 0 Then
-                            dtclientes = tclientes.Consultar(" where codcliente = " + dtfacturaventa.Rows(i).Item(3).ToString)
+                            dtclientes = tclientes.Consultar(" where codcliente = '" + dtfacturaventa.Rows(i).Item(3).ToString + "'")
                         Else
                             If dtclientes.Rows(0).Item(9) = "inactivo" Then
                                 Me.gridfacturaventas.Rows(i).Cells(1).Style.BackColor = Color.Red

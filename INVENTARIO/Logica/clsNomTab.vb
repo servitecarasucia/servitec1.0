@@ -181,7 +181,7 @@
             Case 6
                 Resultado = "nombre,nit,nrc,giro,direccion,telefono,fax,e_mail,estado"
             Case 7
-                Resultado = "nombre,nit,nrc,giro,direccion,telefono,fax,e_mail,estado,municipio,departamento"
+                Resultado = "codcliente,nombre,nit,nrc,giro,direccion,telefono,fax,e_mail,estado,municipio,departamento"
             Case 8
                 Resultado = "numfacturac,tipo,codproveedor,fecha,sumas,descuento,iva,nosujeta,exentas,total,formadepago,unoretencion,estado,tiraje,fechalimite"
             Case 9

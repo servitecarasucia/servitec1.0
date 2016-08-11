@@ -690,7 +690,7 @@ Public Class Ventas
             dtcliente = tcliente.Consultar(" where idclientescf = " & dtfacturaventa.Rows(0).Item(3))
             Dim nc As String = dtcliente.Rows(0).Item(1)
         Catch ex As Exception
-            dtcliente = tclientec.Consultar(" where codcliente = " & dtfacturaventa.Rows(0).Item(3))
+            dtcliente = tclientec.Consultar(" where codcliente = '" & dtfacturaventa.Rows(0).Item(3) & "'")
             Dim nc As String = dtcliente.Rows(0).Item(1)
             fl = False
         End Try
@@ -950,7 +950,7 @@ Public Class Ventas
         dtfacturaventa = tfacturaventa.Consultar(" where codfacturav = " & Me.codfactura)
         dtdetallefacturaventa = tdetallefacturaventa.Consultar(" where codfacturav = " & Me.codfactura)
         Try
-            dtcliente = tcliente.Consultar(" where codcliente = " & dtfacturaventa.Rows(0).Item(3))
+            dtcliente = tcliente.Consultar(" where codcliente = '" & dtfacturaventa.Rows(0).Item(3) & "'")
             Dim nc As String = dtcliente.Rows(0).Item(1)
         Catch ex As Exception
             dtcliente = tcliente1.Consultar(" where idclientescf = " & dtfacturaventa.Rows(0).Item(3))
@@ -1172,13 +1172,13 @@ Public Class Ventas
                             dtc = consultar.Consultar("SELECT cliente FROM clientescf where idclientescf = " & Me.idcliente)
                             nc = dtc.Rows(0).Item(0).ToString
                         Catch ex As Exception
-                            dtc = consultar.Consultar("SELECT nombre FROM cliente where codcliente = " & Me.idcliente)
+                            dtc = consultar.Consultar("SELECT nombre FROM cliente where codcliente = '" & Me.idcliente & "'")
                             nc = dtc.Rows(0).Item(0).ToString
                         End Try
                     Else
                         ella = "El "
                         Try
-                            dtc = consultar.Consultar("SELECT nombre FROM cliente where codcliente = " & Me.idcliente)
+                            dtc = consultar.Consultar("SELECT nombre FROM cliente where codcliente = '" & Me.idcliente & "'")
                             nc = dtc.Rows(0).Item(0).ToString
                         Catch ex As Exception
                             dtc = consultar.Consultar("SELECT cliente FROM clientescf where idclientescf = " & Me.idcliente)
@@ -2051,5 +2051,9 @@ Public Class Ventas
 
     Private Sub texcliente_TextChanged(sender As Object, e As EventArgs) Handles texcliente.TextChanged
 
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs)
+        MsgBox(idcliente)
     End Sub
 End Class
