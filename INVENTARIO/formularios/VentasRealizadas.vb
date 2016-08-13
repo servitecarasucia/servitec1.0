@@ -125,14 +125,14 @@ Public Class VentasRealizadas
 
 
                 If dtfacturaventa.Rows(i).Item(2).ToString = "Factura" Then
-                    dtclientes = tclientescf.Consultar(" where idclientescf = " + dtfacturaventa.Rows(i).Item(3).ToString)
+                    dtclientes = tclientescf.Consultar(" where idclientescf = '" + dtfacturaventa.Rows(i).Item(3).ToString + "'")
                     If dtclientes.Rows.Count = 0 Then
                         dtclientes = tclientes.Consultar(" where codcliente = '" + dtfacturaventa.Rows(i).Item(3).ToString + "'")
                     End If
                     Me.gridfacturaventas.Rows(i).Cells(5).Style.BackColor = Color.White
                 ElseIf dtfacturaventa.Rows(i).Item(2).ToString = "credito" Then
                     Try
-                        dtclientes = tclientescf.Consultar(" where idclientescf = " + dtfacturaventa.Rows(i).Item(3).ToString)
+                        dtclientes = tclientescf.Consultar(" where idclientescf = '" + dtfacturaventa.Rows(i).Item(3).ToString + "'")
                         If dtclientes.Rows.Count = 0 Then
                             dtclientes = tclientes.Consultar(" where codcliente = '" + dtfacturaventa.Rows(i).Item(3).ToString + "'")
                         End If
@@ -157,7 +157,7 @@ Public Class VentasRealizadas
                 Else
                     dtclientes = tclientes.Consultar(" where codcliente = '" + dtfacturaventa.Rows(i).Item(3).ToString + "'")
                     If dtclientes.Rows.Count = 0 Then
-                        dtclientes = tclientescf.Consultar(" where idclientescf = " + dtfacturaventa.Rows(i).Item(3).ToString)
+                        dtclientes = tclientescf.Consultar(" where idclientescf = '" + dtfacturaventa.Rows(i).Item(3).ToString + "'")
                     Else
                         If dtclientes.Rows(0).Item(9) = "inactivo" Then
                             Me.gridfacturaventas.Rows(i).Cells(1).Style.BackColor = Color.Red
